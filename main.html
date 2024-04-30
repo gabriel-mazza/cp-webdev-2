@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vinheria Agnello</title>
+  <script src="login.js"></script>
+
+</head>
+
+<body>
+  <header>
+    <div class="container">
+      <nav>
+        <a href="main.html" class="logo">
+          <img src="Vinheria_Agnello-removebg-preview.png" alt="Vinícola Agnello Logo">
+        </a>
+
+        <ul>
+          <li><a href="#">Início</a></li>
+          <li><a href="#">Sobre</a></li>
+          <li><a href="#">Produtos</a></li>
+          <li><a href="#">Loja</a></li>
+          <li><a href="#">Contato</a></li>
+        </ul>
+
+        <button class="menu-toggle">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </nav>
+    </div>
+
+
+  <div class="container">
+    <form id="login-form">
+        <label for="login">Login:</label><br>
+        <input type="text" id="login" name="login"><br>
+
+        <label for="senha">Senha:</label><br>
+        <input type="password" id="senha" name="senha"><br>
+
+        <button type="submit" class="btn">Entrar</button>
+    </form>
+</div>
+    
+
+    <div class="hero">
+      <div class="container">
+        <h1>Vinheria Agnello</h1>
+        <p>Descubra o sabor da tradição</p>
+
+        <a href="#" class="btn">Explore nossos vinhos</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="sobre">
+      <div class="container">
+        <h2>Sobre a Vinheria Agnello</h2>
+
+        <div class="historia">
+          <p>Fundada em 1953, a Vinheria Agnello é um legado familiar entrelaçado com a paixão pelo vinho. Desde então, a vinheria se consolidou como um símbolo de tradição e qualidade.</p>
+
+          <p>Nossa filosofia é simples: produzir vinhos excepcionais que reflitam o terroir único da região e a paixão de nossa família pelo vinho.</p>
+        </div>
+
+        <div class="processo">
+          <h3>Nosso processo</h3>
+
+          <ul>
+            <li>Seleção rigorosa das uvas</li>
+            <li>Vinificação tradicional com técnicas modernas</li>
+            <li>Envelhecimento em barricas de carvalho francês</li>
+            <li>Engarrafamento e rotulagem manual</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="produtos">
+      <div class="container">
+        <h2>Nossos Produtos</h2>
+
+        <div class="grid">
+          <div class="produto">
+            <img src="Design_sem_nome_16_2.png" alt="Vinho Tinto Vinícola Agnello">
+            <h3>Vinho Tinto Reserva</h3>
+            <p>Elaborado com uvas Cabernet Sauvignon e Merlot, este vinho tinto Reserva apresenta aromas intensos de frutas vermelhas e especiarias, com um sabor encorpado e taninos macios.</p>
+            <a href="detalhes_vinho-t.html" class="btn">Comprar</a>
+          </div>
+
+          <div class="produto">
+            <img src="Design_sem_nome_18_1.png" alt="Vinho Branco Vinícola Agnello">
+            <h3>Vinho Branco Sauvignon Blanc</h3>
+            <p>Este vinho branco Sauvignon Blanc apresenta aromas cítricos e florais, com um sabor refrescante e acidez equilibrada.</p>
+            <a href="detalhes_vinho-b.html" class="btn">Comprar</a>
+          </div>
+
+          <div class="produto">
+            <img src="Design_sem_nome_24_1.png" alt="Vinho Rosé Vinícola Agnello">
+            <h3>Vinho Rosé Grenache</h3>
+            <p>Este vinho rosé Grenache apresenta uma cor rosada vibrante, aromas de frutas vermelhas e flores, com um sabor frutado e final persistente.</p>
+            <a href="detalhes_vinho.r.html" class="btn">Comprar</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="loja">
+      <div class="container">
+        <h2>Loja Online</h2>
+
+        <p>Explore nossa loja online e descubra nosso portfólio completo de vinhos, acessórios e presentes.</p>
+
+        <a href="#" class="btn">Visitar Loja</a>
+      </div>
+    </section>
+
+    <section class="contato">
+        <div class="container">
+            <h2>Entre em Contato</h2>
+            <form id="contact-form">
+                <label for="name">Nome:</label><br>
+                <input type="text" id="name" name="name"><br>
+
+                <label for="phone">Telefone:</label><br>
+                <input type="tel" id="phone" name="phone"><br>
+
+                <label for="email">Email:</label><br>
+                <input type="email" id="email" name="email"><br>
+
+                <label for="message">Mensagem:</label><br>
+                <textarea id="message" name="message" rows="4" cols="50"></textarea><br>
+
+                <button type="submit" class="btn">Enviar</button>
+
+
+            </form>
+        </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>2024 Vinheria Agnello. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+        var form = document.getElementById('contact-form');
+
+        form.addEventListener('submit', function (event) {
+            event.preventDefault();
+
+           
+            alert('Mensagem enviada com sucesso!');
+        });
+    });
+</script>
+
+</body>
+
+</html>

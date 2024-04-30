@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalhes do Vinho - Vinheria Agnello</title>
+    
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <a href="main.html" class="logo">
+                    <img src="Vinheria_Agnello-removebg-preview.png" alt="Vinícola Agnello Logo">
+                </a>
+                <ul>
+                    <li><a href="#">Início</a></li>
+                    <li><a href="#">Sobre</a></li>
+                    <li><a href="#">Produtos</a></li>
+                    <li><a href="#">Loja</a></li>
+                    <li><a href="#">Contato</a></li>
+                </ul>
+                <button class="menu-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="detalhes-vinho-b">
+            <div class="container">
+                <img src="Design_sem_nome_18_1.png" alt="Vinho Branco Vinícola Agnello">
+                <h2>Vinho Branco Sauvignon Blanc</h2>
+                <p>Produzido exclusivamente a partir de uvas Sauvignon Blanc selecionadas, este vinho branco exibe uma expressiva combinação de notas cítricas e herbáceas no nariz.</p>
+                <div class="compra">
+                    <label for="quantidade">Quantidade:</label>
+                    <input type="number" id="quantidade" value="1">
+                    <button onclick="calcularPreco()">Calcular</button>
+                    <p>Total: <span id="total">R$</span></p>
+                    <label for="cupom">Cupom de desconto:</label>
+                    <input type="text" id="cupom">
+                    <button onclick="aplicarDesconto()">Aplicar</button>
+                </div>
+                
+                <div> <button onclick="adicionarAoCarrinho()">Comprar</button> </div>
+            </div>
+        </section>
+
+        <section class="sugestoes">
+            <div class="container">
+                <h2>Sugestões de Combinações</h2>
+                <p>Aqui estão algumas receitas que combinam com o Vinho Branco Sauvignon Blanc:</p>
+                <ul>
+                    <li>Ceviche de Camarão</li>
+                    <li>Salada de Rúcula, Queijo de Cabra e Nozes</li>
+                    <li>Salmão Grelhado com Molho de Ervas</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>2024 Vinheria Agnello. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script>
+        var cupomAplicado = false;
+
+        function calcularPreco() {
+            var quantidade = parseInt(document.getElementById("quantidade").value);
+            var precoUnitario = 90; 
+            var total = quantidade * precoUnitario;
+            document.getElementById("total").textContent = "R$ " + total.toFixed(2);
+        }
+
+        function aplicarDesconto() {
+            var cupom = document.getElementById("cupom").value;
+            if (!cupomAplicado && cupom === "FIAP2024") {
+                var total = parseFloat(document.getElementById("total").textContent.replace("R$ ", ""));
+                var desconto = total * 0.1; 
+                var totalComDesconto = total - desconto;
+                document.getElementById("total").textContent = "R$ " + totalComDesconto.toFixed(2);
+                cupomAplicado = true;
+            } else if (cupomAplicado) {
+                alert("O cupom já foi aplicado nesta compra.");
+            } else {
+                alert("Cupom inválido!");
+            }
+        }
+
+        function adicionarAoCarrinho() {
+            
+            alert("Adicionado ao carrinho com sucesso!");
+        }
+    </script>
+</body>
+</html>
